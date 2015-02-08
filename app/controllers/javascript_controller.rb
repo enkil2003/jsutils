@@ -8,7 +8,12 @@ class JavascriptController < ApplicationController
   end
 
   def create
-    @output = Uglifier.compile(params[:javascript])
+    begin
+      @output = Uglifier.compile(params[:javascript])
+    rescue Exception => e
+      @output = params[:javascript]
+      @error = "There was a problem compiling your javascript code"
+    end
     render :index
   end
 end
