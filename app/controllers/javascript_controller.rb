@@ -11,6 +11,7 @@ class JavascriptController < ApplicationController
   def create
     begin
       @output = Uglifier.compile(params[:javascript])
+      @compress_ratio = (@output.length.to_f / params[:javascript].length.to_f * 100).to_i
     rescue Exception => e
       @output = params[:javascript]
       @error = "There was a problem compiling your javascript code"

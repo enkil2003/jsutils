@@ -1,7 +1,10 @@
 <form method="post" action="" class="navbar-form">
-  <%= @error %>
   <div>
     <textarea id="javascript" name="javascript"><%= @output %></textarea>
+  </div>
+  <%= @error %>
+  <div class="<% unless @compress_ratio %>hide<% end %>">
+    Compress Ratio: <%= @compress_ratio %>%
   </div>
   <fieldset>
     <legend>Output Options</legend>
