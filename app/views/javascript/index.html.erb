@@ -1,0 +1,26 @@
+<form method="post" action="">
+  <div>
+    <textarea id="javascript" name="javascript"><%= @output %></textarea>
+  </div>
+  <h2>Opciones</h2>
+  <fieldset>
+    <legend>Output Options</legend>
+    <input type="checkbox" name="[options][output][semicolons]"><label for="[options][output][semicolons]">Semicolons</label>
+    <input type="checkbox" name="[options][output][preamble]"><label for="[options][output][preamble]">Preamble</label>
+  </fieldset>
+  <fieldset>
+    <legend>Mangle Options</legend>
+    <input type="checkbox" name="[options][mangle][eval]"><label for="[options][mangle][eval]">Eval</label>
+    <input type="checkbox" name="[options][mangle][sort]"><label for="[options][mangle][sort]">Sort</label>
+  </fieldset>
+  <fieldset>
+    <legend>Compress Options</legend>
+    <input type="checkbox" name="[options][compress][sequences]"><label for="[options][compress][sequences]">Sequences</label>
+    <input type="checkbox" name="[options][compress][sort]"><label for="[options][compress][sort]">Sort</label>
+  </fieldset>
+  <fieldset>
+    <legend>General Options</legend>
+    <input type="checkbox" name="[options][enclose]"><label for="[options][enclose]">Enclose</label>
+  </fieldset>
+  <button type="submit">submit</button>
+</form>
