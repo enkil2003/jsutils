@@ -16,10 +16,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="/js/codemirror-4.12/lib/codemirror.js"></script>
 <link rel="stylesheet" href="/js/codemirror-4.12/lib/codemirror.css">
+<link rel="stylesheet" href="/js/codemirror-4.12/theme/<%= @theme %>.css">
 <script src="/js/codemirror-4.12/mode/javascript/javascript.js"></script>
 
 <script language="javascript">
-CodeMirror.fromTextArea(document.getElementById('javascript'), {autofocus: true, lineNumbers: true});
+CodeMirror.fromTextArea(document.getElementById('javascript'), {theme: '<%= @theme %>',autofocus: true, lineNumbers: true});
 </script>
 
 <style>
