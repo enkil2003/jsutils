@@ -3,12 +3,30 @@
 <head>
   <title>Jslindo</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 </head>
 <body>
+  <div class="container">
+    <h1>Javscript lindo</h1>
+    <%= yield %>
+  </div>
+<%= javascript_include_tag "application" %>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="/js/codemirror-4.12/lib/codemirror.js"></script>
+<link rel="stylesheet" href="/js/codemirror-4.12/lib/codemirror.css">
+<script src="/js/codemirror-4.12/mode/javascript/javascript.js"></script>
 
-<%= yield %>
+<script language="javascript">
+CodeMirror.fromTextArea(document.getElementById('javascript'), {autofocus: true});
+</script>
+
+<style>
+body {
+  background-color: #F0DDDD;
+}
+</style>
 
 </body>
 </html>

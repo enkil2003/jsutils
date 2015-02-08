@@ -1,4 +1,6 @@
 Jslindo::Application.routes.draw do
+  get "javascript/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -12,6 +14,7 @@ Jslindo::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :javascript
 
   # Sample resource route with options:
   #   resources :products do
