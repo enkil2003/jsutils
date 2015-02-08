@@ -1,9 +1,8 @@
-<form method="post" action="">
+<form method="post" action="" class="navbar-form">
   <%= @error %>
   <div>
     <textarea id="javascript" name="javascript"><%= @output %></textarea>
   </div>
-  <h2>Opciones</h2>
   <fieldset>
     <legend>Output Options</legend>
     <input type="checkbox" name="[options][output][semicolons]"><label for="[options][output][semicolons]">Semicolons</label>
@@ -23,5 +22,5 @@
     <legend>General Options</legend>
     <input type="checkbox" name="[options][enclose]"><label for="[options][enclose]">Enclose</label>
   </fieldset>
-  <button type="submit">submit</button>
+  <button type="submit" class="btn btn-primary btn-lg">submit</button>
 </form>
